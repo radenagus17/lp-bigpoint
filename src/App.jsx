@@ -26,7 +26,7 @@ function App() {
         </section>
         {/* catatan */}
         <section className="relative pt-14 px-3">
-          <div className="container mx-auto border-2 flex border-yellow-500 rounded-md p-4 lg:gap-12 gap-7 flex-wrap">
+          <div className="container mx-auto border-2 flex lg:flex-row flex-col border-yellow-500 rounded-md p-4 lg:gap-12 gap-7 flex-wrap">
             <div className="flex-1 space-y-3">
               <h4 className="text-2xl font-bold mb-2">Layanan kami :</h4>
               <p>
@@ -61,7 +61,9 @@ function App() {
             className="container mx-auto grid grid-cols-4 gap-6 p-4"
           >
             <div className="flex flex-col col-span-2 gap-1">
-              <label>Nama Lengkap *</label>
+              <label>
+                Nama Lengkap <span className="text-red-500">*</span>
+              </label>
               <input
                 type="text"
                 name="name"
@@ -70,7 +72,9 @@ function App() {
               />
             </div>
             <div className="flex flex-col col-span-2 gap-1">
-              <label>Kontak *</label>
+              <label>
+                Kontak <span className="text-red-500">*</span>
+              </label>
               <input
                 type="text"
                 name="contact"
@@ -79,7 +83,9 @@ function App() {
               />
             </div>
             <div className="flex flex-col col-span-2 gap-1">
-              <label>Email *</label>
+              <label>
+                Email <span className="text-red-500">*</span>
+              </label>
               <input
                 type="email"
                 name="email"
@@ -88,7 +94,9 @@ function App() {
               />
             </div>
             <div className="flex flex-col gap-1 col-span-2 max-w-[25rem]">
-              <label>Pilih kebutuhan anda *</label>
+              <label>
+                Pilih kebutuhan anda <span className="text-red-500">*</span>
+              </label>
               <select
                 name="need"
                 className="bg-gray-100 h-10 placeholder:bg-none outline-none"
@@ -138,7 +146,9 @@ function App() {
               </Select.Root> */}
             </div>
             <div className="flex flex-col col-span-4 gap-1">
-              <label>Pesan *</label>
+              <label>
+                Pesan <span className="text-red-500">*</span>
+              </label>
               <textarea
                 name="pesan"
                 className="bg-gray-100 rounded-md p-2 outline-none"
