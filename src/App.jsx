@@ -9,14 +9,14 @@ function App() {
         {/* hero */}
         <section className="relative pt-24 min-w-[99vw]">
           {/* bg */}
-          <div className="bg-hero-pattern min-h-[42rem] bg-no-repeat bg-cover bg-center relative">
+          <div className="bg-hero-pattern min-h-[42rem] bg-no-repeat bg-cover bg-center relative px-3">
             <div className="container mx-auto min-h-[40rem] flex items-center justify-center">
-              <div className="bg-slate-800 rounded-lg py-5 px-10 shadow-md space-y-4">
-                <h1 className="text-6xl text-yellow-500 font-semibold text-center">
+              <div className="bg-slate-800 rounded-lg py-5 lg:px-10 px-3 shadow-md space-y-4">
+                <h1 className="lg:text-6xl text-2xl text-yellow-500 font-semibold text-center">
                   Mau punya usaha ekspedisi??? <br />
                   Mari Bergabung Menjadi Mitra Big Point
                 </h1>
-                <p className="text-white text-center italic text-lg capitalize">
+                <p className="text-white text-center italic lg:text-lg text-base capitalize">
                   bebas biaya franchise - lokasi fleksibel - free system IT dan
                   apps - penghasilan rutin
                 </p>
@@ -25,8 +25,8 @@ function App() {
           </div>
         </section>
         {/* catatan */}
-        <section className="relative pt-14 ">
-          <div className="container mx-auto border-2 flex border-yellow-500 rounded-md p-4 gap-12 flex-wrap">
+        <section className="relative pt-14 px-3">
+          <div className="container mx-auto border-2 flex border-yellow-500 rounded-md p-4 lg:gap-12 gap-7 flex-wrap">
             <div className="flex-1 space-y-3">
               <h4 className="text-2xl font-bold mb-2">Layanan kami :</h4>
               <p>
@@ -149,7 +149,7 @@ function App() {
               ></textarea>
             </div>
             <button
-              className="py-2 px-4 rounded-md bg-red-600 text-white font-semibold"
+              className="py-2 px-4 col-span-4 lg:col-span-1 rounded-md bg-red-600 text-white font-semibold"
               type="submit"
             >
               Kirim Pesan
