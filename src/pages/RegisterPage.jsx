@@ -35,7 +35,7 @@ export default function RegisterPage() {
   // console.log(pwRef.current?.type);
   const onSubmit = async (data) => {
     try {
-      console.log(data);
+      // console.log(data);
       // kirim data ke server
       await axios.post(
         "https://sbd-gateway.tym7.lyr.id/seller/register/dropper",
@@ -51,7 +51,7 @@ export default function RegisterPage() {
       setSendData(true);
       router("/register/welcome");
     } catch (e) {
-      console.log(e);
+      // console.log(e);
       if (e.response.data.message.username) {
         Swal.fire({
           title: "Upps Error!",
@@ -110,8 +110,8 @@ export default function RegisterPage() {
                     {...register("phone", {
                       required: "No. Telepon is required",
                       minLength: {
-                        value: 12,
-                        message: "Nomor HP minimal 12",
+                        value: 10,
+                        message: "Nomor HP minimal 10",
                       },
                       pattern: {
                         value: /^[0-9]*$/,
@@ -145,10 +145,13 @@ export default function RegisterPage() {
                       {...register("password", {
                         required: "Password is required",
                         pattern: {
-                          value:
-                            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,30}$/,
+                          value: /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/,
+                          // value:
+                          //   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,30}$/,
                           message:
-                            "Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character",
+                            "requires a minimum of 8 characters, at least one uppercase letter, and at least one number",
+                          // message:
+                          //   "Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character",
                         },
                       })}
                       type={togglePw}
